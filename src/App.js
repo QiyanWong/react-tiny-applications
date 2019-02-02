@@ -16,7 +16,7 @@ class App extends Component {
     return (
       <div>
         <p>{this.state.number}</p>
-        <button onClick={this.addOne}>Increase s</button>
+        <button onClick={this.addOne}>Increase </button>
         <button onClick={this.reduceOne}> Decrease </button>
       </div>
     );

@@ -2,10 +2,11 @@ import React, {Component} from 'react';
 
 class Password extends Component {
 	render(){
-		const 
+		
 		return (
-			
-		);
+			<div></div>
+		)
 	}
 }
 
+export default Password

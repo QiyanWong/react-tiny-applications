@@ -1,45 +1,20 @@
 import React, {Component}from 'react';
-
-export class Vote extends Component {
-	constructor() {
-		super();
+import '../node_modules/font-awesome/css/font-awesome.min.css';
+class Vote extends Component {
+	constructor(props) {
+		super(props);
 		this.state = {
 			upScore: 0,
 			downScore: 0,
-			name: "Google",
-			link: "www.google.com",
-			describe: "Search Engine"
+			id : props.id,
+			website: props.website,
+			link: props.link,
+			describe: props.describe,
 		};
 
 		this.increment = this.increment.bind(this);
 		this.decrement = this.decrement.bind(this);
 	}
-
-	render() {
-		return (
-			<div>
-				<div>
-					<p>
-						Up:{this.state.upScore}
-					</p>
-					<p>
-						Down:{this.state.downScore}
-					</p>
-				</div>
-				<div>
-				<p>
-						{this.state.name}
-					</p>
-					<p>
-						{this.state.describe}
-					</p>
-				</div>
-				<button className="countUp" onClick={this.increment}>UP</button>
-				<button className="countDown" onClick={this.decrement}>DOWN</button>
-			</div>
-		);
-	}
-
 	increment = () => {
 		this.setState({
 			upScore: this.state.upScore + 1,
@@ -51,6 +26,22 @@ export class Vote extends Component {
 			downScore: this.state.downScore + 1,
 		});
 	}
-}
+	
+	render() {
+		const trClass = this.state.id % 2 === 0 ? "evenrowcolor" : "oddrowcolor";
+		return (
+			<tr className={trClass}>
+				<td>
+					<button className="fa fa-thumbs-up" onClick={this.increment}></button><b>{" " + this.state.upScore + " "}</b>
+					<button className="fa fa-thumbs-down" onClick={this.decrement}></button><b>{" " + this.state.downScore + " "}</b>
+				</td>
 
+				<td>
+				<a href={this.state.link}>{this.state.website}</a><br></br>
+					{this.state.describe}
+				</td>
+			</tr>
+		);
+	}
+}
 export default Vote

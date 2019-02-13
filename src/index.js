@@ -1,13 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Timer from './hw1-3-timer'
 import './index.css';
-import App from './App';
-import UserList from './hw1-4-userList';
-import * as serviceWorker from './serviceWorker';
-import Slider from './hw1-10-colorpicker';
-import Vote from './Vote'
-ReactDOM.render(<Vote/>, document.getElementById('root'));
+
+import Router from './router'
+ReactDOM.render(<Router/>, document.getElementById('root'));
 
 
 // serviceWorker.unregister();

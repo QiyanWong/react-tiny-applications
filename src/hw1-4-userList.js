@@ -13,7 +13,7 @@ function List(props) {
 	);
 }
 
-class userList extends Component {
+class UserList extends Component {
 	constructor(props) {
 		super(props);
 		// remember that you have to initialize
@@ -52,4 +52,4 @@ class userList extends Component {
 	}
 }
 
-export default userList;
+export default UserList;

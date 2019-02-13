@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+}
+/* .wrapper {
+    position: relative;
+    top: 50px;
+    left: 50px;
+    border: 1px solid;
+    width: 1000px;
+    height: 500px;
+} */
+.left {
+	width: 40%;
+	float: left;
+    background-color: white;
+}
+.right {
+	position: absolute;
+	float: right;
+	border: 1px solid;
+    top: 50px;
+	bottom: 200px;
+	right: 200px;   
+	left: 400px; 
+    background-color: white;
+}
